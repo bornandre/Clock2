@@ -1,0 +1,10 @@
+[Unit]
+Description=ClockTwo
+#After=network-online.target
+ 
+[Service]
+ExecStart=/usr/bin/nohup /usr/local/bin/clock2 &
+ExecStop=/usr/local/bin/clock2_off 
+ 
+[Install]
+WantedBy=multi-user.target
